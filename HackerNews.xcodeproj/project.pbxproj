@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,6 +12,11 @@
 		E6711AD02355179600E00AE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6711ACF2355179600E00AE9 /* Assets.xcassets */; };
 		E6711AD32355179600E00AE9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6711AD22355179600E00AE9 /* Preview Assets.xcassets */; };
 		E6711AD62355179600E00AE9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6711AD42355179600E00AE9 /* Main.storyboard */; };
+		E688E8B12357B11F00DC34AB /* FeedFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = E688E8B02357B11F00DC34AB /* FeedFetcher.swift */; };
+		E688E8B32357B13900DC34AB /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = E688E8B22357B13900DC34AB /* Model.swift */; };
+		E688E8B52357B99900DC34AB /* ItemDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = E688E8B42357B99900DC34AB /* ItemDetail.swift */; };
+		E688E8B82357BB1000DC34AB /* 1.json in Resources */ = {isa = PBXBuildFile; fileRef = E688E8B72357BB1000DC34AB /* 1.json */; };
+		E6EAB3BA23552813009DA0D6 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = E6EAB3B923552813009DA0D6 /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +28,11 @@
 		E6711AD52355179600E00AE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E6711AD72355179600E00AE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E6711AD82355179600E00AE9 /* HackerNews.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HackerNews.entitlements; sourceTree = "<group>"; };
+		E688E8B02357B11F00DC34AB /* FeedFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedFetcher.swift; sourceTree = "<group>"; };
+		E688E8B22357B13900DC34AB /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		E688E8B42357B99900DC34AB /* ItemDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetail.swift; sourceTree = "<group>"; };
+		E688E8B62357BA5000DC34AB /* readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
+		E688E8B72357BB1000DC34AB /* 1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = 1.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6EAB3BA23552813009DA0D6 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -39,6 +50,7 @@
 		E6711ABF2355179400E00AE9 = {
 			isa = PBXGroup;
 			children = (
+				E688E8B62357BA5000DC34AB /* readme.md */,
 				E6711ACA2355179400E00AE9 /* HackerNews */,
 				E6711AC92355179400E00AE9 /* Products */,
 			);
@@ -55,8 +67,12 @@
 		E6711ACA2355179400E00AE9 /* HackerNews */ = {
 			isa = PBXGroup;
 			children = (
+				E688E8B72357BB1000DC34AB /* 1.json */,
+				E688E8B02357B11F00DC34AB /* FeedFetcher.swift */,
+				E688E8B22357B13900DC34AB /* Model.swift */,
 				E6711ACB2355179400E00AE9 /* AppDelegate.swift */,
 				E6711ACD2355179400E00AE9 /* ContentView.swift */,
+				E688E8B42357B99900DC34AB /* ItemDetail.swift */,
 				E6711ACF2355179600E00AE9 /* Assets.xcassets */,
 				E6711AD42355179600E00AE9 /* Main.storyboard */,
 				E6711AD72355179600E00AE9 /* Info.plist */,
@@ -90,6 +106,9 @@
 			dependencies = (
 			);
 			name = HackerNews;
+			packageProductDependencies = (
+				E6EAB3B923552813009DA0D6 /* Alamofire */,
+			);
 			productName = HackerNews;
 			productReference = E6711AC82355179400E00AE9 /* HackerNews.app */;
 			productType = "com.apple.product-type.application";
@@ -118,6 +137,9 @@
 				Base,
 			);
 			mainGroup = E6711ABF2355179400E00AE9;
+			packageReferences = (
+				E6EAB3B823552813009DA0D6 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = E6711AC92355179400E00AE9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -135,6 +157,7 @@
 				E6711AD62355179600E00AE9 /* Main.storyboard in Resources */,
 				E6711AD32355179600E00AE9 /* Preview Assets.xcassets in Resources */,
 				E6711AD02355179600E00AE9 /* Assets.xcassets in Resources */,
+				E688E8B82357BB1000DC34AB /* 1.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,6 +170,9 @@
 			files = (
 				E6711ACE2355179400E00AE9 /* ContentView.swift in Sources */,
 				E6711ACC2355179400E00AE9 /* AppDelegate.swift in Sources */,
+				E688E8B12357B11F00DC34AB /* FeedFetcher.swift in Sources */,
+				E688E8B52357B99900DC34AB /* ItemDetail.swift in Sources */,
+				E688E8B32357B13900DC34AB /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,6 +371,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E6EAB3B823552813009DA0D6 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.9.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E6EAB3B923552813009DA0D6 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E6EAB3B823552813009DA0D6 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E6711AC02355179400E00AE9 /* Project object */;
 }

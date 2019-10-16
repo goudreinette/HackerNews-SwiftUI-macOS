@@ -1,17 +1,32 @@
-//
-//  ContentView.swift
-//  HackerNews
-//
-//  Created by Rein van der Woerd on 14/10/2019.
-//  Copyright © 2019 Rein van der Woerd. All rights reserved.
-//
-
 import SwiftUI
+import Combine
+import Foundation
+
+
+
 
 struct ContentView: View {
+    @ObservedObject var feedFetcher = FeedFetcher()
+
     var body: some View {
-        Text("Hello World")
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
+        NavigationView {
+            List(feedFetcher.items) { (item: FeedItem) in
+                NavigationLink(destination: ItemDetail(item: item)) {
+                    VStack {
+                        Text(item.title!)
+                            .font(.headline)
+                            .multilineTextAlignment(.leading)
+//                        Text(item.url!)
+//                            .multilineTextAlignment(.leading)
+                    }
+                }.padding(10)
+                
+                
+                //                NavigationButton(destination: ProductDetailsView(product: product)) {
+                //                    ProductRow(product: product)
+                //                }
+            }
+        }
     }
 }
 
